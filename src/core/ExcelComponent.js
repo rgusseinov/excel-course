@@ -34,6 +34,11 @@ export class ExcelComponent extends DomListener {
         this.store.dispatch(action)
     }
 
+    // Сюда приходят только те изминения по тем полям, на которые мы подписались
+    storeChanged(){
+
+    }
+
     $subscribe(fn){
         this.storeSub = this.store.subscribe(fn)
     }
